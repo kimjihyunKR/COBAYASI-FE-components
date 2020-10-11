@@ -1,0 +1,286 @@
+/*
+  Background      #EFF3FC
+  Gray Color      #8F94A2
+  Light purple    #CED3FF
+  Text-Black      #131721
+*/
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing : border-box;
+  margin : 0;
+  padding : 0;
+  line-height: 1.5;
+}
+
+body {
+  height: 100vh;
+  /* display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center; */
+  background-color : #EFF3FC;
+  color: #131721;
+}
+
+button {
+  background: none;
+  border: none;
+}
+ 
+/* Default */
+
+.additional-text {
+  color: #8F94A2;
+  font-size: 14px;
+}
+
+.btn {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.set-btn {
+  width: 24px;
+  height: 24px;
+  background-image: url('./res/more_horiz-black-18dp.svg');
+}
+
+.like-btn {
+  width: 24px;
+  height: 24px;
+  background-image: url('./res/thumb_up_alt-24px.svg');
+}
+
+.card {
+  min-width: 300px;
+  max-width : 446px;
+  background-color : #fff;
+  border-radius : 16px;
+  padding : 24px 20px;
+  margin-bottom: 40px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content : space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-header > h1 {
+  display: block;
+  font-size : 16px;
+  color : #8F94A2;
+}
+
+.card-header-info {
+  flex-grow: 1;
+  margin-left: 16px;
+}
+  
+.card-content ul {
+  list-style-type: none;
+}
+
+.user-name {
+  display : block ;
+  font-size:17px;
+  color:#131721;
+}
+  
+.user-profile {
+  flex : none;
+  width : 60px;
+  height : 60px;
+  border-radius : 50%;
+  /*margin-bottom: 17px;*/
+  background-color : #bbbbee;
+  background-image : url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  background-size : cover;
+  background-position : center;
+}
+  
+
+/* total-active-users */
+.total-active-users {
+  max-width: 400px;
+}
+
+.total-active-users > .card-content {
+  display : flex;
+  flex-wrap: nowrap; 
+  justify-content : space-between;
+}
+
+.total-active-users, .card-user:nth-child(3n) {
+  margin : 0;
+  margin-bottom: 24px;
+}
+    
+.total-active-users, .card-user {
+  /* margin-right : 56px; */
+  height: max-content;
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+}
+
+.total-active-users, .user-profile {
+  text-align : center;
+}
+
+/* message list */
+.message-list {
+  max-width: 400px;
+}
+
+.message-list-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 6px;
+}
+
+.message-list-item:last-child {
+  margin-bottom : 0;
+}
+
+.message-list-content {
+  margin : 0 12px;
+}
+
+.message-list-text {
+  /* 텍스트 넘김 처리 */
+  color: #8F94A2;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message-time {
+
+}
+
+/* my profile */
+
+/* sns box */
+.sns-box {
+  width: 446px;
+}
+
+.sns-box.card-header {
+
+}
+
+.sns-box .card-content p {
+  margin-bottom: 17px;
+}
+
+.sns-box .user-name {
+  font-size: 16px;
+}
+
+/* sns-recommend */
+.sns-recommend {
+
+}
+
+.sns-recommend .card-header {
+  margin-bottom: 55px;
+}
+
+.sns-recommend .card-header .user-profile{
+  width: 75px;
+  height: 75px;
+}
+
+.sns-recommend .card-content::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #8F94A2;
+  margin-bottom: 42px;
+}
+
+.sns-recommend .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items : center;
+}
+
+.card-content p {
+  margin-bottom: 29px;
+}
+
+.recommend-num{
+  color: #34B06D;
+}
+
+.recommend-pending {
+  
+}
+
+.recommend-members {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.recommend-members .user-profile {
+  width: 56px;
+  height: 56px;
+  margin-right: 12px;
+}
+
+.recommend-members .user-profile:last-child {
+  margin-right: 0;
+}
+
+.btn-detail {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: rgb(70,93,226);
+  background: linear-gradient(135deg, rgba(70,93,226,1) 0%, rgba(118,75,162,1) 100%);
+  border-radius: 9px;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* profile */
+
+.user-job {
+  
+}
+
+.progress {
+  width: 100%;
+  height: 5px;
+  background-color: #EEEFF3;
+  border-radius: 50px;
+  margin-bottom: 17px;
+}
+
+.progress::after {
+  content: '';
+  display : block;
+  z-index: 1;
+  width: 30%;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #5351FB;
+}
+
+.user-points {
+  float: right;
+}
+
