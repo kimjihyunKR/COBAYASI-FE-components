@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="gridSystem.css">
+  <link rel="stylesheet" href="grid-system.css">
   <title>Grid System</title>
 </head>
 <body>
   <div class="container">
     <div class="grid-area"></div>
-    <header class="col-12">
+    <header class="col-12 col-m-6">
       <h1>how to make grid system</h1>
       <button id="grid-btn" class="no-grid" type="button">show grid</button>
     </header>
     <div class="content row">
-      <nav class="col-3">
+      <nav class="col-3 col-m-2">
         <ul>
           <li>container 크기 결정하기</li>
           <li>컬럼 값 계산하기</li>
@@ -23,7 +23,7 @@
         </ul>
       </nav>
 
-      <main class="col-9">
+      <main class="col-9 col-m-4">
         <section>
           <h1>container 크기 결정하기</h1>
           <p>
@@ -43,7 +43,7 @@
         <section>
           <h1>거터값 설정하기</h1>
           <p>
-            이 코드를 이해하기 위해선 CSS의 선택자를 알아야한다. [다음 링크](http://www.nextree.co.kr/p8468/#26attributeselectors)를 참고하도록.
+            이 코드를 이해하기 위해선 CSS의 선택자를 알아야한다. 링크를 참고하도록.
             `[]` 는 속성 선택자이다. class 속성이 "col-"을 포함하고 있는 것들 모두에 다음 스타일을 부여한다는 뜻이다. 가로 패딩값을 15px씩 주면 합쳐서 거터값이 30px이 된다.
             *️⃣ margin으로 해선 안 됨 주의!
           </p>

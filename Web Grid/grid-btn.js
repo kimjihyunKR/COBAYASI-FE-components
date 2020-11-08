@@ -16,7 +16,7 @@ $('#grid-btn').on({
 
 let showGrid = () => {
   for(let i=0 ; i < 12 ; i ++){
-    $('.grid-area').append('<div class="col-1"></div>');
+    $('.grid-area').append('<div class="col-1 col-m-1"></div>');
   }
 }
 
