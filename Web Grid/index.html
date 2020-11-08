@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gridSystem.css">
+  <title>Grid System</title>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-area"></div>
+    <header class="col-12">
+      <h1>how to make grid system</h1>
+      <button id="grid-btn" class="no-grid" type="button">show grid</button>
+    </header>
+    <div class="content row">
+      <nav class="col-3">
+        <ul>
+          <li>container 크기 결정하기</li>
+          <li>컬럼 값 계산하기</li>
+          <li>거터값 설정하기</li>
+        </ul>
+      </nav>
+
+      <main class="col-9">
+        <section>
+          <h1>container 크기 결정하기</h1>
+          <p>
+            body값을 100으로 해주어 container가 가운데에 올 수 있도록 해준다. 컨테이너는 웹 상에서 1200px이므로 다음과 같이 설정해준다. 마지막 부분의 거터값(마진값)을 생각하여 1230px로 지정해준다. 후에 반응형 `@mediaQuery()` 처리를 할 땐 해상도에 따라 나누어주자. (⭐공부 필요)
+          </p>
+        </section>
+  
+        <section>
+          <h1>컬럼 값 계산하기</h1>
+          <p>
+            전체 100%를 12개의 컬럼으로 나눠보자. 100/12=8.33 따라서 컬럼하나의 width 값은 8.33%가된다.
+
+이를 활용하여 컬럼 몇개에 걸쳤는지 계산하면 간단한 그리드 시스템이 완성된다.
+          </p>
+        </section>
+  
+        <section>
+          <h1>거터값 설정하기</h1>
+          <p>
+            이 코드를 이해하기 위해선 CSS의 선택자를 알아야한다. [다음 링크](http://www.nextree.co.kr/p8468/#26attributeselectors)를 참고하도록.
+            `[]` 는 속성 선택자이다. class 속성이 "col-"을 포함하고 있는 것들 모두에 다음 스타일을 부여한다는 뜻이다. 가로 패딩값을 15px씩 주면 합쳐서 거터값이 30px이 된다.
+            *️⃣ margin으로 해선 안 됨 주의!
+          </p>
+          </div>
+        </section>
+      </main>
+
+      
+    </div>
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="grid-btn.js"></script>
+
+</body>
+</html>

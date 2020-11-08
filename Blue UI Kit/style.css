@@ -3,6 +3,7 @@
   Blue    #4364F7
   Dark    #000000
 */
+
 /* default style */
 * {
   margin: 0;
@@ -13,14 +14,18 @@
   letter-spacing: 0.014em;
   line-height: 170%;
 }
+*::selection {
+  background-color: #4364F7;
+  color: #fff;
+}
 
 body {
   background-color: #eeeeee;
-  display: flex;
+  /* display: flex; */
   width: 100%;
-  flex-direction: column;
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 li {
@@ -79,8 +84,12 @@ button {
   padding: 28px;
   background-color: #fff;
   margin : 30px;
+  height: fit-content;
 }
 
+h1 ~ .card-content {
+  margin-top: 20px;
+}
 .card-content ~ .card-footer{
   margin-top: 20px;
 }
@@ -107,6 +116,13 @@ button {
 
 .btn-round {
   border-radius: 200px;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr) ;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 
@@ -279,13 +295,24 @@ button {
 .gift-card {
   position: relative;
   width: 319px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.gift-card .btn-close {
+.btn-close{
   width: 47px;
   height: 47px;
   padding: 12px;
   border-radius: 100px;
+}
+
+.btn-close::after {
+  display: block;
+  content: url(./public/icon/close-icon.svg);
+}
+
+.gift-card .btn-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -293,12 +320,35 @@ button {
 }
 
 .gift-card h1 {
-
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gift-card h1::before {
   display: block;
-  width: ;
-  height: ;
-  content: ;
+  width: 73px;
+  height: 69px;
+  content: '';
+  background-image: url(./public/icon/gift.svg);
+  background-size: cover;
+  margin-bottom: 26px;
+}
+
+.gift-content li {
+  line-height: 1em;
+  margin: 12.5px;
+}
+
+.gift-content li::before {
+  display: inline-block;
+  content: '';
+  width: 1em;
+  height: 1em;
+  background-image: url(./public/icon/list-icon.svg);
+  background-size: contain;
+  background-repeat:no-repeat;
+  margin-right: 10px;
+  float: left;
 }
